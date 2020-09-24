@@ -2,6 +2,5 @@
 
 Collection of applications in Go <br /><br />
 
-**1.** Simple Calculator <br />
-**2.** Casino - Number guessing game <br />
-**3.** Tic Tac Toe - Game <br />
+**1.** Casino - Number guessing game <br />
+**2.** Tic Tac Toe - Game <br />

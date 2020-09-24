@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
+	"strconv"
 )
 
 func logo(pos []string) {
@@ -27,11 +28,11 @@ func logo(pos []string) {
 }
 
 func main() {
-	fmt.Print("NQ")
 	var remote = []string{"1", "2", "3", "4", "5", "6", "7", "8", "9"}
 	logo(remote)
 	var plr1, plr2 string
-	fmt.Scan(&plr1)
+	fmt.Print("\n  Player 1, Do you want to be X or O ? ")
+	fmt.Scanf("%s", &plr1)
 	if plr1 == "X" || plr1 == "x" {
 		plr1 = "X"
 		plr2 = "O"
@@ -42,16 +43,42 @@ func main() {
 	logo(remote)
 
 	processor := func(plr string, plrno int) bool {
+		var final string = ""
 		var chances = []string{"048", "246", "012", "345", "678", "036", "147", "258"}
 		var pos string
 		fmt.Printf("\n  Player %d can choose his position : ", plrno)
-		fmt.Scanf(pos)
+		fmt.Scanf("%s", &pos)
+		found := false
 		for i, num := range remote {
 			if pos == num {
-				remote = copy(remote[:i], "X", remote[i:])
+				remote[i] = plr
+				found = true
+				logo(remote)
 			}
 		}
-		return true
+		if !found {
+			fmt.Print("\n  Invalid Entry . ! You lost your chance.\n")
+		}
+		for i, str := range remote {
+			if str == plr {
+				final += strconv.Itoa(i)
+			}
+		}
+		for _, chance := range chances {
+			line := 0
+			for _, chFinal := range final {
+				for _, chChance := range chance {
+					if string(chChance) == string(chFinal) {
+						line = line + 1
+					}
+					if line == 3 {
+						fmt.Printf("\n  Congrats ! Player %d have won the match.\n", plrno)
+						return true
+					}
+				}
+			}
+		}
+		return false
 	}
 
 	var win bool
@@ -68,5 +95,6 @@ func main() {
 			}
 		}
 	}
-
+	fmt.Print("\n  Draw Match !\n")
+	return
 }
