@@ -1,0 +1,33 @@
+# Learning Go Lang
+[S2 C Lab Programs](https://github.com/nandan-unni/CUSAT-Lab-Works/tree/master/S2-CP-Lab) in Go <br /><br />
+
+**1.** To write a program to calculate and display areas of rectangle and triangle. <br />
+
+**2.** To write a program for electricity bill preparation. <br />
+
+**3.** To write a program to find the roots of a quadratic equation. <br />
+
+**4.** To write a simple menu driven calculator program using switch statement. <br />
+
+**5.** To write a program to find the sum of digits of a given number. <br />
+
+**6.** To write a program to print all the prime numbers of a given range. <br />
+
+**7.** To write a program to print the sine and cosine series. <br />
+
+**8.** To write a program to print Pascal’s triangle. <br />
+
+**9.** To write a program to print the sum and average of elements in an array. <br />
+
+**10.** To write a program to sort the given numbers using bubble sort. <br />
+
+**11.** To write a program to perform Matrix addition and matrix multiplication. <br />
+
+**12.** To write a program to perform string manipulation functions like string concatenations, comparison, find the length and string copy without using library functions. <br />
+
+**13.** To write a program to arrange names in alphabetical order. <br />
+
+**14.** To write a C program to calculate the mean, variance and standard deviation using functions. <br />
+
+**15.** To write a C program to perform sequential and binary search using functions. <br />
+
