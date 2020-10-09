@@ -31,3 +31,14 @@
 
 **15.** To write a C program to perform sequential and binary search using functions. <br />
 
+**16.** To write a program to print the Fibonacci series using recursive function. <br />
+
+**17.** To write a program to print the factorial of the given number using recursive function. <br />
+
+**18.** To print the mark sheet of n students using structures. <br />
+
+**19.** Write a menu driven C program to do the following <br/>
+ &nbsp; &nbsp; &nbsp; **A.** Check whether a given matrix is symmetric or not <br />
+ &nbsp; &nbsp; &nbsp; **B.** Find and Display the upper and lower triangular matrices of a given matrix in matrix format.<br />
+ &nbsp; &nbsp; &nbsp; Use separate functions for each .Read the matrix in the main function. <br />
+ 

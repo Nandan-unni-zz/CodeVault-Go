@@ -10,7 +10,7 @@ type Student struct {
 	perc            float64
 }
 
-func main() {
+func marksheet() {
 	var n int
 	var s [50]Student
 	fmt.Printf("Enter the number of students : ")
