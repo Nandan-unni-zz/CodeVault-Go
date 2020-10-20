@@ -1,15 +1,14 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
+
+	"./routes"
 )
 
-func helloWorld(res http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(res, "<h1>Hello World from Go http<h1>")
-}
-
 func main() {
-	http.HandleFunc("/", helloWorld)
-	http.ListenAndServe(":8000", nil)
+	models.init()
+	router = routes.Router()
+	http.HandleFunc("", router)
+	http.ListenAndServe(":5000", nil)
 }
