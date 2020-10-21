@@ -1,27 +1,5 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <link rel="stylesheet" href="../static/css/styles.css" >
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-</head>
-
-<body>
-<br /><div class="qn">
-    <h2>{{ question.question_text }}</h2>
-    <div class="opts">
-        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-        <form action="{% url 'vote' question.id %}" method="post">
-        {% csrf_token %}
-        {% for choice in question.choice_set.all %}
-        <div class="opt">
-            <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
-            <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br /><br />
-        </div>
-        {% endfor %}
-        <br /><input type="submit" value="Vote">
-        </form>
-    </div>
-</div>
-</body>
-</html>
+<h1>Vote</h1>
+<link rel="stylesheet" type="text/css" href="/static/css/styles.css"/>
+<a href="/">Feed</a><br />
+<a href="/vote">Vote</a><br />
+<a href="/result">Result</a><br />

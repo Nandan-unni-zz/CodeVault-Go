@@ -1,16 +1,31 @@
 package handlers
 
-// FeedGetHandler : Handler
-func FeedGetHandler() {}
+import (
+	"net/http"
 
-// FeedPostHandler : Handler
-func FeedPostHandler() {}
+	"../utils"
+)
 
-// VoteGetHandler : Handler
-func VoteGetHandler() {}
+// FeedHandler : Handler
+func FeedHandler(res http.ResponseWriter, req *http.Request) {
+	if req.Method == "GET" {
+		print("GET: /\n")
+		utils.RenderTemplate(res, "feed.html", nil)
+	}
+}
 
-// VotePostHandler : Handler
-func VotePostHandler() {}
+// VoteHandler : Handler
+func VoteHandler(res http.ResponseWriter, req *http.Request) {
+	if req.Method == "GET" {
+		print("GET: /vote/\n")
+		utils.RenderTemplate(res, "vote.html", nil)
+	}
+}
 
-// ResultGetHandler : Handler
-func ResultGetHandler() {}
+// ResultHandler : Handler
+func ResultHandler(res http.ResponseWriter, req *http.Request) {
+	if req.Method == "GET" {
+		print("GET: /result/\n")
+		utils.RenderTemplate(res, "result.html", nil)
+	}
+}
