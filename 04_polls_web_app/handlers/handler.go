@@ -11,6 +11,10 @@ func FeedHandler(res http.ResponseWriter, req *http.Request) {
 	if req.Method == "GET" {
 		print("GET: /\n")
 		utils.RenderTemplate(res, "feed.html", nil)
+	} else {
+		// data, err := ioutil.ReadAll(req.Body)
+		// save to db and get the personolized feed
+		utils.RenderTemplate(res, "feed.html", nil)
 	}
 }
 

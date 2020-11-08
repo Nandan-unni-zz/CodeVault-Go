@@ -2,7 +2,10 @@ package models
 
 // Choice : Model
 type Choice struct {
-	id int64
+	id         int64
+	questionID int64
+	choice     string
+	votesCount int32
 }
 
 // SaveChoice : Method

@@ -2,7 +2,10 @@ package models
 
 // Question : Model
 type Question struct {
-	id int64
+	id       int64
+	question string
+	pubDate  string
+	modDate  string
 }
 
 // SaveQuestion : Method
